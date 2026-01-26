@@ -3,10 +3,9 @@ kind: Pod
 metadata:
   name: expense
   labels:
-    project: expense
-    environment: dev
     namespace: expense
 spec:
   containers:
+  # docker run -itd --name nginx nginx
   - name: nginx 
     image: nginx
