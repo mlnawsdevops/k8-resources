@@ -14,5 +14,6 @@ spec:
         cpu: "120m"
         memory: "100Mi"
     env:
-      project: expense
+      name: course
+      value: "devops"
 
