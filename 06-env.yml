@@ -1,0 +1,16 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: environment
+spec: 
+  containers:
+  - name: nginx
+    image: nginx
+    # env
+    env: 
+    - name: course
+      value: "devops" 
+    - name: trainer
+      value: "siva" 
+    - name: cloud
+      value: "aws"
