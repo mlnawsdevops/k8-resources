@@ -10,6 +10,6 @@ spec:
     module: backend
   ports: 
   - name: nginx-svc-port
-    protocol: "tcp"
+    protocol: "TCP"
     port: 80 #servicePort
     targetPort: 80 #containerPort
