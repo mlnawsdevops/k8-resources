@@ -21,7 +21,9 @@ spec:
       containers:
       - name: nginx
         # image: nginx # version-1
-        image: nginx:stable-perl # version -2 image upgraded
+        # image: nginx:stable-perl # version -2 image upgraded
+        image: nginx:stable
+
 
 
 ---
