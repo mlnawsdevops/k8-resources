@@ -19,3 +19,18 @@ spec:
       containers:
       - name: nginx
         image: nginx
+
+---
+apiVersion: v1 
+kind: Service
+metadata:
+  name: nginx-deployment
+spec:
+  type: ClusterIP
+  selector:
+    project: expense
+  ports:
+  - name: nginx-svc-port
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
