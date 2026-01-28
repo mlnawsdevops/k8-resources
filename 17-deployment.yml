@@ -6,8 +6,7 @@ metadata:
     project: expense
     module: backend
     environment: dev
-  annotations:
-    kubectl.kubernetes.io/change-cause: "Created using 17-deployment.yml"
+  
 spec:
   replicas: 3
   selector:
@@ -15,6 +14,8 @@ spec:
       project: expense
   template:
     metadata:
+      annotations:
+        kubectl.kubernetes.io/change-cause: "Created using 17-deployment.yml"
       labels:
         project: expense
     spec:
