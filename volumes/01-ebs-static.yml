@@ -57,4 +57,4 @@ spec:
     persistentVolumeClaim:
       claimName: ebs-static-claim
   nodeSelector:
-    topology.kubernetes.io/zone=us-east-1b # kubectl get no --show-labels
+    topology.kubernetes.io/zone: us-east-1b # kubectl get no --show-labels
