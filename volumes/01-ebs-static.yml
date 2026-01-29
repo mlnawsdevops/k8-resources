@@ -21,3 +21,18 @@ spec:
   #             operator: In
   #             values:
   #               - us-east-2c
+
+# PVC
+---
+apiVersion: v1 
+kind: PersistentVolumeClaim
+metadata:
+  name: ebs-static-claim
+spec:
+  storageClassName: " "
+  volumeName: ebs-static
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage:  5Gi
