@@ -3,15 +3,27 @@ kind: PersistentVolume
 metadata:
   name: expense-efs
 spec:
-  capacity:
-    storage: 5Gi
   volumeMode: Filesystem
   accessModes:
   - ReadWriteOnce
-  storageClassName: ""
+  storageClassName: "" # dynamic storage class name
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
     volumeHandle: fs-0d980b179fa64a43b
+  capacity:
+    storage: 5Gi
 
 ---
+apiVersion: v1 
+kind: PersistentVolumeClaim
+metadata: 
+  name: expense-efs
+spec:
+  volumeName: expense-efs
+  storageClassName: ""
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
